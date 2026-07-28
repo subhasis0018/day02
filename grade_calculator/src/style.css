@@ -1,0 +1,137 @@
+:root {
+  --bg: #14151a;
+  --card: #1e2028;
+  --text: #e9eaee;
+  --muted: #9aa0ad;
+  --border: #2e313c;
+  --accent: #6c8cff;
+
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.card {
+  width: 100%;
+  max-width: 26rem;
+  padding: 2rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  margin: 0.35rem 0 1.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.7rem 0.9rem;
+  font-size: 1rem;
+  color: var(--text);
+  background: #14151a;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: -1px;
+}
+
+button {
+  padding: 0.7rem 1.1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #7d9aff;
+}
+
+.result {
+  display: none;
+}
+
+.result.show {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  padding: 1rem 1.1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #14151a;
+}
+
+.result .grade {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.result .detail {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.grade-a .grade { color: #4ade80; }
+.grade-b .grade { color: #a3e635; }
+.grade-c .grade { color: #facc15; }
+.grade-d .grade { color: #fb923c; }
+.grade-e .grade { color: #f87171; }
+.grade-fail .grade { color: #ef4444; }
+.invalid .grade { color: var(--muted); font-size: 1.4rem; }
+
+.scale {
+  width: 100%;
+  margin-top: 1.75rem;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.scale td {
+  padding: 0.4rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.scale-grade {
+  font-weight: 600;
+}
+
+.scale-range {
+  text-align: right;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
